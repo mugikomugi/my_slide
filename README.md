@@ -10,7 +10,7 @@
 |touch_modal.html|モーダルスライド
 |commonフォルダ<br>myslide.js<br>myslide.css<br>myslide_timer.js<br>myslide_timer.css<br>myslide_timer_wide.js<br>myslide_timer_wide.css<br>myslide_modal.js<br>myslide_modal.css<br>jquery-3.6.0.min.js<br>jquery.easing.1.3.js | <br>手動スライドjs<br>手動スライドcss<br>自動スライドjs<br>自動スライドcss<br>横幅100%自動スライドjs<br>横幅100%自動スライドcss<br>モーダルスライドjs<br>モーダルスライドcss<br>jQuery<br>移動動作用プラグイン
 |imageフォルダ|画像格納
-|
+
 
 ### 手動スライド
 - touch.html
