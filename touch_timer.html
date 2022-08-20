@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>touchイベントとタイマーテスト</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./common/myslide_timer.css">
+</head>
+<body>
+  <h1>touchイベントとスライド<br class="sp_show">とタイマー</h1>
+  <p class="center">chromeデベロッパーツールでスマホ表示にするとtouchイベントできます。</p>
+
+  <div class="slideBox">
+    <!-- 表示領域 -->
+    <div id="slidePanel">
+
+      <div class="panel">
+        <figure class="panelImg">
+          <img src="./image/slide1.jpg" alt="">
+        </figure>
+      </div>
+
+      <div id="prev"><img src="./image/prev.svg" alt="前へ"></div>
+      <div id="next"><img src="./image/next.svg" alt="次へ"></div>
+
+    </div>
+    <!-- //.slidePanel -->
+
+    <!-- サムネイル スライド画像を格納 -->
+    <ul id="thumb">
+      <li class="thumbLi act"><img src="./image/slide1.jpg" alt=""></li>
+      <li class="thumbLi"><img src="./image/slide2.jpg" alt=""></li>
+      <li class="thumbLi"><img src="./image/slide3.jpg" alt=""></li>
+      <li class="thumbLi"><img src="./image/slide4.jpg" alt=""></li>
+      <li class="thumbLi"><img src="./image/slide5.jpg" alt=""></li>
+      <li class="thumbLi"><img src="./image/slide6.jpg" alt=""></li>
+    </ul>
+
+  </div>
+  <!-- //.#slidePanel -->
+
+  <ul class="link">
+    <li><a href="./touch.html">手動スライド</a></li>
+    <li><a href="./touch_timer.html">自動スライド</a></li>
+    <li><a href="./touch_timer_wide.html">横幅いっぱいスライド</a></li>
+    <li><a href="./touch_modal.html">モーダルスライド</a></li>
+  </ul>
+  
+  <script src="./common/jquery-3.6.0.min.js"></script>
+  <script src="./common/jquery.easing.1.3.js"></script>
+  <script src="./common/myslide_timer.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>touchイベントモーダルテスト</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./common/myslide_modal.css">
+</head>
+<body>
+  <h1>touchイベントとモーダル</h1>
+  <p class="center">chromeデベロッパーツールでスマホ表示にするとtouchイベントできます。<br>
+    サムネイルをクリックするとモーダルウィンドウが表示します。
+  </p>
+
+  <section class="slideBox">
+    <h2>サムネイル</h2>
+
+    <!-- サムネイル スライド画像を格納 -->
+    <ul id="thumb">
+      <li class="thumbLi">
+        <img src="./image/slide1.jpg" alt="">
+        <article class="modal_text">
+          <h3 class="modal_title">子猫貰いました</h3>
+          <div class="text_box">
+            <p>野良猫を保護いているボランティアの方から子猫を貰いました。<br>
+            子猫なのに5kgの超重量級です。</p>
+          </div>
+        </article>
+      </li>
+      <li class="thumbLi">
+        <img src="./image/slide2.jpg" alt="">
+        <article class="modal_text">
+          <h3 class="modal_title">大きなパンツと手袋柄です</h3>
+          <div class="text_box">
+            <p>首によだれ掛けの模様もあります。<br>
+            端正な顔立ちと茶トラ模様、小顔で耳も大きくキュートな男の子です。</p>
+          </div>
+        </article>
+      </li>
+      <li class="thumbLi">
+        <img src="./image/slide3.jpg" alt="">
+        <article class="modal_text">
+          <h3 class="modal_title">肉球もキュートです</h3>
+          <div class="text_box">
+            <p>コーラルピンクの綺麗な肉球。足の先まで完璧です。</p>
+          </div>
+        </article>
+      </li>
+      <li class="thumbLi">
+        <img src="./image/slide4.jpg" alt="">
+        <article class="modal_text">
+          <h3 class="modal_title">人慣れしていません</h3>
+          <div class="text_box">
+            <p>超ビビリで人を見ると逃げてしまい、半年たってもなつきません。<br>室内ノラと化してます。</p>
+          </div>
+        </article>
+      </li>
+      <li class="thumbLi">
+        <img src="./image/slide5.jpg" alt="">
+        <article class="modal_text">
+          <h3 class="modal_title">お母さんとお婆ちゃんも生粋のノラ</h3>
+          <div class="text_box">
+            <p>聞いた話ではお母さんとお婆ちゃんも生粋のノラで人に懐いてなかったそうです。<br>
+            </p>
+          </div>
+        </article>
+      </li>
+      <li class="thumbLi">
+        <img src="./image/slide6.jpg" alt="">
+        <article class="modal_text">
+          <h3 class="modal_title">諦めながら共同生活</h3>
+          <div class="text_box">
+            <p>人慣れしていない割に脱走したことはありません。窓は眺めてますが無理に突破しようとする仕草はないようです。毎晩家の中を睨みをきかしてパトロールしてくれてます。</p>
+          </div>
+        </article>
+      </li>
+    </ul>
+
+  </section>
+  <!-- //.#slidePanel -->
+
+  <!-- オーバーレイ -->
+  <div id="overlay">
+    <!-- 表示領域 -->
+    <div id="slidePanel">
+      <figure class="panelImg">
+        <img src="./image/slide1.jpg" alt="">
+      </figure>
+      <!-- サムネのデータより呼び出し -->
+      <article id="modal_contents">
+        <h3 class="modal_title">子猫貰いました</h3>
+          <div class="text_box">
+            <p>野良猫を保護いているボランティアの方から子猫を貰いました。<br>
+            生後8ヶ月なのに5kgの超重量級です。</p>
+          </div>
+      </article>
+
+      <div id="prev"><img src="./image/prev.svg" alt="前へ"></div>
+      <div id="next"><img src="./image/next.svg" alt="次へ"></div>
+      <div id="close_modal">×</div>
+    </div>
+    <!-- //.slidePanel -->
+  </div>
+  <!-- //#overlay -->
+
+  <ul class="link">
+    <li><a href="./touch.html">手動スライド</a></li>
+    <li><a href="./touch_timer.html">自動スライド</a></li>
+    <li><a href="./touch_timer_wide.html">横幅いっぱいスライド</a></li>
+    <li><a href="./touch_modal.html">モーダルスライド</a></li>
+  </ul>
+  
+  <script src="./common/jquery-3.6.0.min.js"></script>
+  <script src="./common/jquery.easing.1.3.js"></script>
+  <script src="./common/myslide_modal.js"></script>
+</body>
+</html>

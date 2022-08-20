@@ -1,0 +1,242 @@
+@charset 'utf-8';
+/*--------------------
+touchイベントとスライドとタイマー
+--------------------*/
+/*---------- reset.css ----------*/
+div *, h1, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*---------- ページ全体 ----------*/
+body {
+  color: #3E0102;
+  font-family: 'Kiwi Maru', serif;
+  margin: 0;
+}
+
+h1 {
+  margin: 50px auto 20px auto;
+  text-align: center;
+  font-size: 36px;
+  width: 620px;
+  position: relative;
+}
+
+h1::before, h1::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../image/act_icon.svg) left bottom no-repeat;
+  background-size: 20px;
+  position: absolute;
+}
+
+h1::before {
+  left: -30px;
+  bottom: 10px;
+  transform: rotate(-20deg);
+}
+
+h1::after {
+  right: -30px;
+  bottom: 10px;
+  transform: rotate(20deg);
+}
+
+.center {
+  margin-bottom:50px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/*---------- slideスタイル ----------*/
+
+.slideBox {
+  width: 600px;
+  margin: 0 auto 100px auto;
+}
+
+#slidePanel {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+#prev, #next {
+  position: absolute;
+  top: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#prev:hover, #next:hover {
+  opacity: 0.8;
+}
+
+#prev {
+  left: -26px;
+}
+
+#next {
+  right: -26px;
+}
+
+.panel {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.panelImg {
+  display: flex;
+}
+
+/* スライド画像を格納して非表示 */
+.thumbLi img {
+  display: none;
+}
+
+#thumb {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.thumbLi {
+  width: 26px;
+  height: 26px;
+  background: url(../image/thumb_icon.svg) left top no-repeat;
+  background-size: 26px;
+  margin: 0 16px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.act, .thumbLi:hover {
+  background: url(../image/act_icon.svg) left top no-repeat;
+  background-size: 26px;
+}
+
+.sp_show {
+  display: none;
+}
+
+.link {
+  width: 1000px;
+  margin: 0 auto 70px auto;
+  display: flex;
+  justify-content: center;
+  border-top: solid 1px #ccc;
+  padding-top: 30px;
+}
+
+.link li {
+  margin: 0 10px;
+}
+
+.link a {
+  display: block;
+  width: 180px;
+  line-height: 30px;
+  background: #f5a818;
+  text-align: center;
+  color: #fff;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.link a:hover {
+  background: #3E0102;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    margin: 30px auto 20px auto;
+    font-size: 24px;
+    width: calc(100% - 60px);
+  }
+
+  h1::before {
+    left: -15px;
+    bottom: 6px;
+}
+
+  h1::after {
+    right: -15px;
+    bottom: 6px;
+  }
+
+  .center {
+    font-size: 14px;
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+
+  .slideBox {
+    width: 100%;
+  }
+  
+  #slidePanel {
+    height: auto;
+    position: relative;
+  }
+
+  .panelImg img {
+    /* スライド幅がwindowの2倍なので画像を合わせる */
+    width: calc(100% / 2);
+  }
+
+  #prev, #next {
+    height: 100%;
+    top: 0;
+  }
+
+  #prev img, #next img {
+    height: 100%;
+  }
+
+  #prev {
+    left: 0;
+  }
+  
+  #next {
+    right: 0;
+  }
+
+  .sp_show {
+    display: block;
+  }
+
+  .link {
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 20px 10px 0 10px;
+    margin: 0 0 70px 0;
+  }
+  
+  .link li {
+    margin: 10px;
+  }
+  
+  .link a {
+    font-size: 14px;
+    width: 150px;
+  }
+
+}
