@@ -91,7 +91,7 @@ https://gallery.okamechan.com/slide/touch_modal.html
 
 ### 2123/01/01/js更新
 
-変数をまとめて汎用化、」オブジェクトに挑戦してみる<br>
+変数をまとめて汎用化、オブジェクトに挑戦してみる<br>
 
 
 
