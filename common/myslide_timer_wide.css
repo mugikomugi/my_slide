@@ -1,9 +1,12 @@
 @charset 'utf-8';
+
 /*--------------------
 touchイベントとスライドとタイマー
 --------------------*/
 /*---------- reset.css ----------*/
-div *, h1, ul {
+div *,
+h1,
+ul {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -37,7 +40,8 @@ h1 {
   position: relative;
 }
 
-h1::before, h1::after {
+h1::before,
+h1::after {
   content: '';
   display: block;
   width: 20px;
@@ -60,7 +64,7 @@ h1::after {
 }
 
 .center {
-  margin-bottom:50px;
+  margin-bottom: 50px;
   font-size: 16px;
   text-align: center;
 }
@@ -78,13 +82,14 @@ h1::after {
   overflow: hidden;
 }
 
-#slidePanel::before, #slidePanel::after {
+#slidePanel::before,
+#slidePanel::after {
   content: '';
   display: block;
   position: absolute;
   width: calc((100% - 1000px) /2);
   height: 100%;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.6);
   top: 0;
   z-index: 30;
 }
@@ -97,7 +102,8 @@ h1::after {
   right: 0;
 }
 
-#prev, #next {
+#prev,
+#next {
   position: absolute;
   top: calc((100% - 300px) / 2);
   cursor: pointer;
@@ -114,11 +120,13 @@ h1::after {
   right: calc((100% - 1000px) / 2 - 26px);
 }
 
-#prev img, #next img {
+#prev img,
+#next img {
   height: 100%;
 }
 
-#prev:hover, #next:hover {
+#prev:hover,
+#next:hover {
   opacity: 0.8;
 }
 
@@ -143,12 +151,13 @@ h1::after {
   #prev {
     left: calc((100% - 80%) / 2 - 26px);
   }
-  
+
   #next {
     right: calc((100% - 80%) / 2 - 26px);
   }
 
-  #slidePanel::before, #slidePanel::after {
+  #slidePanel::before,
+  #slidePanel::after {
     width: calc((100% - 80%) /2);
   }
 }
@@ -179,7 +188,8 @@ h1::after {
   transition: 0.5s;
 }
 
-.act, .thumbLi:hover {
+.act,
+.thumbLi:hover {
   background: url(../image/act_icon.svg) left top no-repeat;
   background-size: 26px;
 }
@@ -226,7 +236,7 @@ h1::after {
   h1::before {
     left: -15px;
     bottom: 6px;
-}
+  }
 
   h1::after {
     right: -15px;
@@ -242,13 +252,14 @@ h1::after {
   .slideBox {
     width: 100%;
   }
-  
+
   #slidePanel {
     height: auto;
     position: relative;
   }
 
-  #slidePanel::before, #slidePanel::after {
+  #slidePanel::before,
+  #slidePanel::after {
     background: none;
   }
 
@@ -256,7 +267,8 @@ h1::after {
     width: 100%;
   }
 
-  #prev, #next {
+  #prev,
+  #next {
     top: 0;
     width: 15px;
     height: 100%;
@@ -265,7 +277,7 @@ h1::after {
   #prev {
     left: 0;
   }
-  
+
   #next {
     right: 0;
   }
@@ -274,20 +286,22 @@ h1::after {
     display: block;
   }
 
+}
+
+@media screen and (max-width: 1200px) {
   .link {
     width: 100%;
     flex-wrap: wrap;
     padding: 20px 10px 0 10px;
     margin: 0 0 70px 0;
   }
-  
+
   .link li {
     margin: 10px;
   }
-  
+
   .link a {
     font-size: 14px;
     width: 150px;
   }
-
 }

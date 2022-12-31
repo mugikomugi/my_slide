@@ -1,9 +1,14 @@
 @charset 'utf-8';
+
 /*--------------------
 touchイベントとモーダル
 --------------------*/
 /*---------- reset.css ----------*/
- div *, h1, article, section, ul {
+div *,
+h1,
+article,
+section,
+ul {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -38,7 +43,8 @@ h1 {
   position: relative;
 }
 
-h1::before, h1::after {
+h1::before,
+h1::after {
   content: '';
   display: block;
   width: 20px;
@@ -61,7 +67,7 @@ h1::after {
 }
 
 .center {
-  margin-bottom:50px;
+  margin-bottom: 50px;
   font-size: 16px;
   text-align: center;
 }
@@ -69,8 +75,9 @@ h1::after {
 /*---------- slideスタイル ----------*/
 
 .slideBox {
-  width: 1000px;
+  width: min(100%, 1020px);
   margin: 0 auto 150px auto;
+  padding: 0 10px;
 }
 
 .slideBox h2 {
@@ -81,12 +88,12 @@ h1::after {
   width: 100%;
   height: 100vh;
   position: fixed;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   top: 0;
   bottom: 0;
   overflow-y: scroll;
   z-index: 50;
-   display: none;
+  display: none;
 }
 
 #slidePanel {
@@ -99,19 +106,21 @@ h1::after {
   top: calc((100% - 560px) / 2);
   left: calc((100% - 680px) / 2);
   z-index: 51;
-  box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 
 
-#prev, #next {
+#prev,
+#next {
   position: absolute;
   top: calc((100% - 300px) /2);
   cursor: pointer;
   transition: 0.5s;
 }
 
-#prev:hover, #next:hover {
+#prev:hover,
+#next:hover {
   opacity: 0.8;
 }
 
@@ -169,16 +178,17 @@ h1::after {
 }
 
 .link {
-  width: 1000px;
+  width: min(100%, 1020px);
   margin: 0 auto 70px auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   border-top: solid 1px #ccc;
-  padding-top: 30px;
+  padding: 30px 10px 0 10px;
 }
 
 .link li {
-  margin: 0 10px;
+  margin: 10px;
 }
 
 .link a {
@@ -206,7 +216,7 @@ h1::after {
   h1::before {
     left: -15px;
     bottom: 6px;
-}
+  }
 
   h1::after {
     right: -15px;
@@ -222,14 +232,12 @@ h1::after {
   .slideBox {
     width: 100%;
   }
-  
+
   #slidePanel {
     min-height: auto;
     width: 90%;
     left: 5%;
-    top: 70px;
-    bottom: 70px;
-    padding: 20px 10px;
+    padding: 40px 10px;
   }
 
   #modal_contents {
@@ -241,26 +249,26 @@ h1::after {
     width: 100px;
   }
 
-  #prev, #next {
+  #prev,
+  #next {
     height: 200px;
     top: calc((100% - 200px) / 2);
   }
 
-  #prev img, #next img {
+  #prev img,
+  #next img {
     height: 200px;
   }
 
   .link {
-    width: 100%;
-    flex-wrap: wrap;
     padding: 20px 10px 0 10px;
     margin: 0 0 70px 0;
   }
-  
+
   .link li {
     margin: 10px;
   }
-  
+
   .link a {
     font-size: 14px;
     width: 150px;
