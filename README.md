@@ -9,7 +9,8 @@ my_slideをclass化して、オブジェクトの中身を変えるだけで汎�
 |touch_timer.html|自動スライド
 |touch_timer_wide.html|横幅100%自動スライド
 |touch_modal.html|モーダルスライド
-|commonフォルダ<br>myslide_timer.js<br>myslide_timer.css<br>myslide_timer_wide.js<br>myslide_timer_wide.css<br>myslide_modal.js<br>myslide_modal.css<br>jquery-3.6.0.min.js| スライドjs<br>スライドcss<br>横幅100%自動スライドjs<br>横幅100%自動スライドcss<br>モーダルスライドjs<br>モーダルスライドcss<br>jQuery<br>移動動作用プラグイン
+|commonフォルダ|
+myslide_timer.js<br>myslide_timer.css<br>myslide_timer_wide.js<br>myslide_timer_wide.css<br>myslide_modal.js<br>myslide_modal.css<br>jquery-3.6.0.min.js
 |imageフォルダ|画像格納<br>
 
 ### 自動スライド
